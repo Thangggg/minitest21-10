@@ -7,14 +7,24 @@
 <body>
 
 <script>
-    function check(){
-        let sum = 0
-        for (let i = 0; i < 500; i++) {
-            if (i < 2){
-                sum = sum + i
-            }
+    let sum = 0;
+    function check(number){
+        if (number <= 1){
+            return false;
+        }else {
+            for (let i = 2; i < number ; i++) {
+                if(number % i === 0 ){
+                    return false;
+                }
+            }return true;
         }
     }
+    for (let i = 0; i < 500 ; i++) {
+        if (check(i)===true){
+            sum = sum + i;
+        }
+    }
+    document.write(" Tổng các số nguyên tố nhỏ hơn 500 là "+ sum)
 </script>
 </body>
 </html>
