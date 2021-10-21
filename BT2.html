@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr = [1,4,6,8,4,8,5,5,3,8,];
+    let num = prompt();
+    check(num)
+    function check(){
+        let count = 0
+        let flag = true
+        for (let i = 0; i < arr.length; i++) {
+            if (num == arr[i]){
+                count++
+                flag = false
+            }
+        }
+        if (flag == true){
+            document.write(-1)
+        }else {
+            document.write(num + " xuất hiện " + count + " lần trong mảng ")
+        }
+    }
+</script>
+</body>
+</html>
